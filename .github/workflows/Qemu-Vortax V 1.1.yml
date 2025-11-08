@@ -53,7 +53,7 @@ jobs:
           sudo tailscale up --authkey "${TAILSCALE_AUTHKEY}" --hostname "gh-xfce-vm-${{ github.run_id }}" --accept-routes --accept-dns=false
           TS_IP=$(sudo tailscale ip -4 | head -n1)
           echo "TAILSCALE_IP=$TS_IP" >> $GITHUB_ENV
-      - name: Install XFCE + RDP + NoMachine + SSH/X
+      - name: Install XFCE + RDP + NoMachine
         run: |
           sudo apt-get update -qq
           sudo apt install -y tigervnc-viewer wmctrl wget
@@ -87,7 +87,7 @@ jobs:
           
           declare -A ISO_URLS
           ISO_URLS["mint"]="https://pub.linuxmint.io/stable/22.2/linuxmint-22.2-cinnamon-64bit.iso"
-          ISO_URLS["pear"]="https://eu-east-cdn.pearos.xyz/pearOS-NiceC0re-2025.11-x86_64.iso"
+          ISO_URLS["pear"]="https://www.mediafire.com/file/7ztcyqd2ggiv58p/pearOS-NiceC0re-2025.11-x86_64.iso"
           ISO_URLS["bazite"]="https://download.bazzite.gg/bazzite-stable-live.iso"
           ISO_URLS["kali"]="https://kali.download/base-images/kali-2025.3/kali-linux-2025.3-live-amd64.iso"
           ISO_URLS["bliss_gapps"]="https://dn720203.ca.archive.org/0/items/Bliss-v15.9-x86_64-OFFICIAL-gapps-20240114/Bliss-v15.9-x86_64-OFFICIAL-gapps-20240114.iso"
