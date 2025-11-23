@@ -18,6 +18,12 @@ You can run Linux distributions, Android builds, or pre-made cloud images (ISO/Q
 > The author holds no responsibility for bans, data loss, or misuse.
 > Use entirely **at your own risk**.
 
+> 🛑 **Encountering an issue or error?** Please refer to the **[Official Troubleshooting Guide](https://github.com/qemuvortax/Qemu-Vortax/blob/main/Help-Troubleshoot.md)** for immediate solutions to common problems.
+
+
+> 💬 **Can't find your issue?** If the guide doesn't cover your problem, feel free to **[contact me directly via my official Bot](https://t.me/YourOfficialBotLink)** for personalized support.
+
+
 ---
 
 ## 🚀 Features
