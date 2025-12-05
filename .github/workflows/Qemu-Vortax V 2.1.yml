@@ -18,11 +18,11 @@ on:
       vm_name:
         description: 'Name of the system/disk'
         required: true
-        default: 'ME2008'
+        default: 'Qemu-Vortax'
       runtime:
         description: 'Runtime duration in minutes (default 350)'
         required: false
-        default: '335'
+        default: '325'
       connection_method:
         description: 'Choose connection method: tailscale or ngrok'
         required: true
@@ -547,7 +547,6 @@ jobs:
           echo "Session ended after ${RUNTIME} minutes."
           
       - name: Compressing and uploading the QCOW2 file
-        if: always()
         run: |
           sudo pkill -9 qemu || true
           if [[ "$UPLOAD_QCOW2" == "yes" ]]; then
@@ -557,7 +556,7 @@ jobs:
             sudo 7z a -t7z -mx=9 "/mnt/${VM}-${DATE}.7z" "/mnt/${VM}.qcow2"
       
             echo "Starting upload using MegaTools..."
-            TARGET_FILE="${VM}-${DATE}.7z"
+            TARGET_FILE="${VM}.7z"
             TARGET_PATH="/mnt/$TARGET_FILE"
             
             echo "Setting up MegaTools configuration file..."
@@ -572,7 +571,7 @@ jobs:
             ls -lh /mnt | grep -E '\.7z$|\.qcow2$|\.iso$' | awk '{split($5,size,""); if($5 ~ /G/){print $9, $5} else {printf "%s %.2fG\n", $9, $5/1024/1024/1024}}'
             sudo cp .megarc /mnt
             echo " uploading qcow2 file to mega"
-            sudo megaput "/mnt/${VM}-${DATE}.7z" --path /Root
+            sudo megaput "/mnt/${VM}.7z" --path /Root
             echo "getting the download link"
             DOWNLOAD_LINK=$(sudo megaexport /Root/"${VM}-${DATE}.7z")
             echo "Download link: $DOWNLOAD_LINK"
