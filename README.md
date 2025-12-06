@@ -104,7 +104,7 @@ Go to **Settings → Secrets → Actions → New repository secret** and add the
 | `centos_qcow2` | ISO/QCOW2 | Command Line interface | CentOS Stream 10 GenericCloud image for stable enterprise environments. |
 | `cutefish` | ISO/QCOW2 | <img src="assets/cutefish.png" alt="Cutefish" width="240" height="240"> | CutefishOS 22.04 with a clean macOS-like interface. |
 | `deepin` | ISO/QCOW2 | <img src="assets/deepin.png" alt="Deepin" width="240" height="240"> | Deepin Linux with an elegant UI and strong customization. |
-| `debian` | ISO/QCOW2 | <img src="assets/Debian.png" alt="Debian" width="240" height="240"> | Debian stable GNU/Linux system focusing on reliability and security. |
+| `debian` | ISO/QCOW2 | <img src="assets/debian.png" alt="Debian" width="240" height="240"> | Debian stable GNU/Linux system focusing on reliability and security. |
 | `elementary` | ISO/QCOW2 | <img src="assets/elementary.png" alt="Elementary" width="240" height="240"> | Elementary OS with Pantheon UI, inspired by macOS clean design. |
 | `fedora` | ISO/QCOW2 | <img src="assets/fedora.png" alt="Fedora" width="240" height="240"> | Fedora Workstation with latest technologies and GNOME desktop. |
 | `garuda_mokka` | ISO/QCOW2 | <img src="assets/garuda.png" alt="Garuda" width="240" height="240"> | Garuda Linux Mokka edition for gaming and speed. |
